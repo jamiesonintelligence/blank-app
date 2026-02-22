@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit API Search</title>
+</head>
+<body>
+    <h1>Search Company</h1>
+    <script>
+        async function searchCompany(companyName) {
+            const response = await fetch(`https://cors.sh/https://www.reddit.com/search.json?q=${companyName}`);
+            const data = await response.json();
+            console.log(data); // Process the data as needed
+        }
+    </script>
+</body>
+</html>
